@@ -1,14 +1,13 @@
-package Task3.Students;
+package Student;
 
-public class student {
+import javax.lang.model.util.ElementScanner14;
+
+public class Student {
      private int rollNumber;
      private String name;
      private String course;
      private int  marks1, marks2, marks3;
-
-     public student(){};
-     
-     public student(int rollNumber, String name, String course, int marks1, int marks2, int marks3) {
+    public Student(int rollNumber, String name, String course, int marks1, int marks2, int marks3) {
         this.rollNumber = rollNumber;
         this.name = name;
         this.course = course;
@@ -16,19 +15,32 @@ public class student {
         this.marks2 = marks2;
         this.marks3 = marks3;
     }
-
-     public int calculateTotal(){
-        return (marks1+marks2+marks3);
-    }
-     public int calculateAverage(){
-        return (marks1+marks2+marks3)/3;
-     }
-     public void calculateGrade(){
-
-     }
+    
     @Override
     public String toString() {
-        return "Student [rollNumber=" + rollNumber + ", name=" + name + ", course=" + course + "]";
+        return "Student [rollNumber=" + rollNumber + ", name=" + name + ", course=" + course + ", marks1=" + marks1
+                + ", marks2=" + marks2 + ", marks3=" + marks3 + "]";
+    }
+    public int calculateTotal(){
+        return (marks1+marks2+marks3);
+    }
+    public int calculateAverage(){
+        return (marks1+marks2+marks3)/3;
+    }
+    public String calculateGrade(){
+        int sum = marks1+marks2+marks3;
+        if(sum>=90*3)
+            return "A+";
+        else if(sum>=80*3)
+            return "A";
+        else if(sum>=70*3)
+            return "B+";
+        else if(sum>=60*3)
+            return "B";
+        else if(sum>=55*3)
+            return "C";
+        else 
+            return "F";
     }
     public int getRollNumber() {
         return rollNumber;
@@ -66,4 +78,5 @@ public class student {
     public void setMarks3(int marks3) {
         this.marks3 = marks3;
     }
+     
 }
