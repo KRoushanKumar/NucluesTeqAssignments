@@ -24,5 +24,11 @@ public class SimpleExceptionExample {
         System.out.println("NumberFormatException");
         System.out.println(e.getMessage());
     }
+    try {
+        int arr[] = new int[5];
+        arr[9]=10;
+     } catch (ArrayIndexOutOfBoundsException e) {
+        System.out.println(e.getMessage());
+    }
  }   
 }
