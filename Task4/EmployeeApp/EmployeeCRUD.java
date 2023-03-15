@@ -1,9 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-import javax.lang.model.util.ElementScanner14;
-import javax.swing.text.AbstractDocument.BranchElement;
-
 class employee implements Serializable{
     private int empID;
     private String name;
